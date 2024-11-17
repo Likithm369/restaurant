@@ -1,0 +1,358 @@
+<html>
+<head>
+     <style>   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #606366;
+    color: #ddd;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #FFD700;
+}
+
+h3 {
+    color: #121212;
+}
+
+.navbar {
+            background-color: #03257a;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            height: 80px; 
+        }
+        
+        .navbar .logo {
+            display: flex;
+            align-items: center; 
+        }
+        
+        .navbar .logo-img {
+            width: 100px; 
+            height: auto; 
+            margin-right: 15px;
+            object-fit: contain; 
+        }
+        
+        .navbar .logo span {
+            font-size: 24px;
+            font-weight: 700;
+            color: #FFD700;
+            letter-spacing: 2px;
+        }
+
+
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+            display: flex;
+            justify-content: space-around; 
+            flex-grow: 1; 
+            list-style-type: none;
+            gap: 200px;
+            margin-left: 30px; 
+        }
+.nav-links a {
+    color: #E0E0E0;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FFD700; 
+}
+
+
+.image-section {
+    width: 100%;
+    height: 500px;
+    background-color: #1c1c1c;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#menu {       
+    background-color: #021a57;
+    padding: 80px 20px;
+    text-align: center;
+    color: #FFD700;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.4);
+}
+
+#menu h2 {
+    font-size: 40px;
+    margin-bottom: 60px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    width: 300px;
+    background-color: #2A2A2A;
+    border-radius: 12px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: contain;
+    object-position: center; 
+    margin-bottom: 15px;
+    background-color: #2a2a2a; 
+}
+
+
+.menu-item p {
+    font-size: 22px;
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+}
+
+
+#gallery {
+    background-color: #121212;
+    padding: 50px 20px;
+    text-align: center;
+    color: #FFD700;
+}
+
+#gallery h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+#book {
+    background-color: #5e5e5e;
+    color: #333;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
+}
+#book h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #121212;
+}
+
+.booking-form input, .booking-form textarea {
+    width: 320px;
+    padding: 18px;
+    margin: 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    background-color: #f1f1f1;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.booking-form button {
+    padding: 18px 30px;
+    border-radius: 8px;
+    background-color: #121212;
+    color: #FFD700;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #ff0000;
+    color: #edf600;
+}
+
+#contact {
+    background-color: #2A2A2A;
+    color: #e4e4e4;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+#about {
+    padding-top: 0%;
+    text-align: center;
+    background-color: #5e5e5e;
+    font-size: large;
+}
+marquee{
+    color:black;
+    font-size: 20px;
+}
+
+    </style>
+
+    <title>HM'S Restaurant</title>
+    <link rel="icon" type="image/png" href="LOGO.png">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="LOGO.png" alt="Restaurant Logo" class="logo-img"> 
+        <h1 class="logo">HM'S RESTAURANT</h1>
+        <ul class="nav-links">
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li> 
+            <li><a href="#book">PRE Book </a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <center><h1>Welcome to HM'S RESTAURANT</h1></center>&nbsp;&nbsp;
+    <marquee direction="right">A place where flavors meet perfection! </marquee>
+
+    <div class="image-section">
+        <img id="menu-image" src="resss.jpg" alt="Food Image">
+    </div>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="pizza.png" alt="PIZZA">
+                <p>PIZZA <br>500 &#8377;  -  2000&#8377;</p>
+            </div>
+            <div class="menu-item">
+                <img src="brrr.png" alt="BURGER">
+                <p>BURGER <br>500 &#8377;  -  2000&#8377;</p>
+            </div>
+            <div class="menu-item">
+                <img src="pasta.png" alt="PASTA">
+                <p>PASTA <br>500 &#8377;  -  2000&#8377;</p>
+            </div>
+            <div class="menu-item">
+                <img src="fri.png" alt="FRIES">
+                <p>FRIES <br>500 &#8377;  -  2000&#8377;</p>
+            </div>
+            <div class="menu-item">
+                <img src="mixed-fruit-white-plate-removebg-preview.png" alt="FRUITS SALAD">
+                <p>FRUIT SALAD <br>500 &#8377;  -  2000&#8377;</p>
+            </div>
+            <div class="menu-item">
+                <img src="gpbi.png" alt="GOBI">
+                <p>GOBI <br>500 &#8377;  -  2000&#8377;</p>
+            </div>
+        </div>&nbsp;
+
+    
+    <section id="book">
+        <h2>PRE BOOK </h2>
+        <form class="booking-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Phone No." required>
+            <input type="text" placeholder="Requests" required><br>
+            <button type="submit">Book Now</button><br>
+            <marquee direction="right">OUR TEAM WILL REACH OUT TO YOU SHORTLY </marquee>
+            
+        </form>
+    </section><hr style="color: rgb(0, 0, 0);">
+
+    <section id="about">
+            <h3>About Us</h3>&nbsp;
+            <p>At HM's Restaurant, we believe in serving food made with love and the freshest ingredients. Join us for a dining experience like no other.</p>
+          </section>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 Address: 18 RR NAGAR BENGALURU &nbsp;&nbsp; 📞 Phone: +91 9113661548 &nbsp;&nbsp;  📧 Email: hmrestaurants@gmail.com</p>
+      </section>
+    
+      <footer>
+        <center><p>&copy; 2024 HM's Restaurants. All Rights Reserved.</p>
+      </footer>
+
+</body>
+</html>
